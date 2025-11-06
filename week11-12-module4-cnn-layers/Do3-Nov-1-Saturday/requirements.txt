@@ -1,0 +1,243 @@
+# Requirements for CNN Practical Sessions
+# Course: 21CSE558T - Deep Neural Network Architectures
+# Module 4: CNNs - Hands-on Implementation
+# Updated: November 1, 2025
+
+# ==================================================
+# Core Deep Learning Framework
+# ==================================================
+tensorflow==2.15.0
+keras==2.15.0
+
+# ==================================================
+# Data Processing & Numerical Computing
+# ==================================================
+numpy==1.26.2
+pandas==2.1.3
+scipy==1.11.4
+
+# ==================================================
+# Visualization
+# ==================================================
+matplotlib==3.8.2
+seaborn==0.13.0
+
+# ==================================================
+# Machine Learning Utilities
+# ==================================================
+scikit-learn==1.3.2
+
+# ==================================================
+# Image Processing (Optional - for advanced usage)
+# ==================================================
+opencv-python==4.8.1.78
+Pillow==10.1.0
+
+# ==================================================
+# Jupyter Notebook Support
+# ==================================================
+jupyter==1.0.0
+notebook==7.0.6
+ipywidgets==8.1.1
+
+# ==================================================
+# Progress Bars & Utilities
+# ==================================================
+tqdm==4.66.1
+
+# ==================================================
+# System & Environment
+# ==================================================
+python-dateutil==2.8.2
+pytz==2023.3
+
+# ==================================================
+# Additional Utilities
+# ==================================================
+h5py==3.10.0
+
+# ==================================================
+# Installation Instructions
+# ==================================================
+#
+# Option 1: Install all requirements
+# pip install -r requirements.txt
+#
+# Option 2: Install in Colab (first cell of notebook)
+# !pip install tensorflow==2.15.0 matplotlib seaborn scikit-learn
+#
+# Option 3: Create virtual environment
+# python -m venv cnn_env
+# source cnn_env/bin/activate  # On Windows: cnn_env\Scripts\activate
+# pip install -r requirements.txt
+#
+# ==================================================
+# Version Notes
+# ==================================================
+#
+# TensorFlow 2.15.0:
+# - Latest stable version (as of Nov 2025)
+# - Full Keras API support
+# - Improved performance
+# - Compatible with Python 3.8-3.11
+#
+# GPU Support:
+# - TensorFlow GPU support included by default
+# - CUDA 12.x and cuDNN 8.9 required for GPU
+# - Google Colab provides GPU automatically
+#
+# ==================================================
+# Troubleshooting
+# ==================================================
+#
+# If you encounter issues:
+#
+# 1. TensorFlow installation fails:
+#    - Try: pip install --upgrade pip
+#    - Then: pip install tensorflow==2.15.0
+#
+# 2. ImportError for cv2:
+#    - pip install opencv-python-headless==4.8.1.78
+#
+# 3. Matplotlib display issues:
+#    - pip install matplotlib==3.8.2 --force-reinstall
+#
+# 4. Memory errors:
+#    - Reduce batch size in notebooks
+#    - Use smaller model architectures
+#    - Close other applications
+#
+# 5. Version conflicts:
+#    - Create fresh virtual environment
+#    - Install requirements.txt in clean environment
+#
+# ==================================================
+# Platform-Specific Notes
+# ==================================================
+#
+# Google Colab:
+# - Most packages pre-installed
+# - Only need: !pip install tensorflow==2.15.0
+# - GPU available by default
+#
+# Windows:
+# - Use Anaconda for easier installation
+# - Some packages may require Visual C++ Build Tools
+#
+# macOS:
+# - Works with both Intel and Apple Silicon (M1/M2)
+# - TensorFlow has native Apple Silicon support
+#
+# Linux:
+# - Straightforward installation
+# - Recommended for production use
+#
+# ==================================================
+# Minimum Hardware Requirements
+# ==================================================
+#
+# CPU Mode:
+# - 4 GB RAM (8 GB recommended)
+# - 2 GB free disk space
+# - Training time: 30-60 minutes per model
+#
+# GPU Mode (Recommended):
+# - NVIDIA GPU with CUDA support
+# - 4 GB VRAM (8 GB recommended)
+# - Training time: 5-10 minutes per model
+#
+# Google Colab (Free):
+# - Provides GPU/TPU for free
+# - Session limits apply
+# - Recommended for students
+#
+# ==================================================
+# Testing Your Installation
+# ==================================================
+#
+# Run this Python code to verify installation:
+#
+# import tensorflow as tf
+# import numpy as np
+# import matplotlib.pyplot as plt
+# import seaborn as sns
+# import sklearn
+#
+# print("TensorFlow version:", tf.__version__)
+# print("NumPy version:", np.__version__)
+# print("GPU available:", len(tf.config.list_physical_devices('GPU')) > 0)
+# print("✅ All packages imported successfully!")
+#
+# Expected output:
+# TensorFlow version: 2.15.0
+# NumPy version: 1.26.2
+# GPU available: True (if GPU present)
+# ✅ All packages imported successfully!
+#
+# ==================================================
+# Package Descriptions
+# ==================================================
+#
+# tensorflow:       Deep learning framework (includes Keras)
+# numpy:            Numerical computing library
+# pandas:           Data manipulation and analysis
+# matplotlib:       Plotting and visualization
+# seaborn:          Statistical data visualization
+# scikit-learn:     Machine learning utilities (metrics, preprocessing)
+# opencv-python:    Computer vision library (image processing)
+# jupyter:          Interactive notebook interface
+# h5py:             HDF5 file format (for saving models)
+#
+# ==================================================
+# Optional Dependencies (Not Required)
+# ==================================================
+#
+# For advanced users who want additional functionality:
+#
+# # Visualization enhancements
+# plotly==5.18.0
+#
+# # Additional deep learning tools
+# tensorboard==2.15.1
+#
+# # Data augmentation library
+# albumentations==1.3.1
+#
+# # Model explainability
+# lime==0.2.0.1
+# shap==0.43.0
+#
+# ==================================================
+# Version Compatibility Matrix
+# ==================================================
+#
+# Python Version | TensorFlow | NumPy  | Compatible
+# ---------------|------------|--------|------------
+# 3.8            | 2.15.0     | 1.26.2 | ✅ Yes
+# 3.9            | 2.15.0     | 1.26.2 | ✅ Yes
+# 3.10           | 2.15.0     | 1.26.2 | ✅ Yes
+# 3.11           | 2.15.0     | 1.26.2 | ✅ Yes
+# 3.12           | 2.15.0     | 1.26.2 | ⚠️ Limited
+#
+# ==================================================
+# Support & Resources
+# ==================================================
+#
+# Official Documentation:
+# - TensorFlow: https://www.tensorflow.org/install
+# - Keras: https://keras.io/getting_started/
+# - NumPy: https://numpy.org/install/
+#
+# Community Support:
+# - Stack Overflow: tag [tensorflow] [keras]
+# - TensorFlow Forum: https://discuss.tensorflow.org/
+# - GitHub Issues: https://github.com/tensorflow/tensorflow/issues
+#
+# Course Resources:
+# - Instructor guide: instructor_guide.md
+# - Student guide: student_submission_guide.md
+# - Notebooks: 01-07 in this directory
+#
+# ==================================================
+# End of requirements.txt
+# ==================================================
